@@ -6,7 +6,9 @@ class Sample < ApplicationRecord
   belongs_to :well, optional: true
   belongs_to :library_tube, optional: true
   belongs_to :submission, optional: true
+  belongs_to :sequencing_run, optional: true
   has_one :sequencing_metadata
 
   validates :name, presence: true
+
 end
