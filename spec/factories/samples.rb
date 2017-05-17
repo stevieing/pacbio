@@ -10,6 +10,7 @@ FactoryGirl.define do
       after(:build) do |sample|
         build(:sequencing_metadata, sample: sample)
       end
+
     end
   end
 end
