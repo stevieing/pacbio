@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Submission, type: :model do
@@ -21,5 +23,4 @@ RSpec.describe Submission, type: :model do
   it 'can have many samples' do
     expect(create(:submission, samples: create_list(:sample, 5)).samples.count).to eq(5)
   end
-
 end

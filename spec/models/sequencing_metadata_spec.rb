@@ -1,7 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe SequencingMetadata, type: :model do
-
   it 'must have a sample' do
     expect(build(:sequencing_metadata, sample: nil)).to_not be_valid
   end
@@ -15,5 +16,4 @@ RSpec.describe SequencingMetadata, type: :model do
     expect(build(:sequencing_metadata, immobilization_time: nil)).to_not be_valid
     expect(build(:sequencing_metadata, immobilization_time: 'one')).to_not be_valid
   end
-
 end

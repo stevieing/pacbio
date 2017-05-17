@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -7,6 +9,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 module Pacbio
+  # Application setup
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
@@ -18,13 +21,13 @@ module Pacbio
     # replace fixtures with factory girl
     config.generators do |g|
       g.test_framework :rspec,
-          fixtures: true,
-          view_specs: false,
-          helper_specs: false,
-          routing_specs: false,
-          controller_specs: false,
-          request_specs: true
-      g.fixture_replacement :factory_girl, dir: "spec/factories"
+                       fixtures: true,
+                       view_specs: false,
+                       helper_specs: false,
+                       routing_specs: false,
+                       controller_specs: false,
+                       request_specs: true
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
   end
 end

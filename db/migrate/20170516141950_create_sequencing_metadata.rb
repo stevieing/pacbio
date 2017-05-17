@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateSequencingMetadata < ActiveRecord::Migration[5.1]
   def change
     create_table :sequencing_metadata do |t|

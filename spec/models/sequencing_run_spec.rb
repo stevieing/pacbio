@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe SequencingRun, type: :model do
@@ -16,5 +18,4 @@ RSpec.describe SequencingRun, type: :model do
   it 'must have a sequencing kit box barcode' do
     expect(build(:sequencing_run, sequencing_kit_box_barcode: nil)).to_not be_valid
   end
-
 end

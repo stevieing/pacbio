@@ -1,3 +1,8 @@
+# frozen_string_literal: true
+
+# Allows creation of UUIDs for AR models
+# TODO; I don't like the way it checks whether UUID already exists.
+# Do we need to check it??
 module Uuidable
   extend ActiveSupport::Concern
 

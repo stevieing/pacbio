@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateSequencingRuns < ActiveRecord::Migration[5.1]
   def change
     create_table :sequencing_runs do |t|

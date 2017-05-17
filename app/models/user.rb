@@ -1,4 +1,7 @@
-class User < ApplicationRecord
+# frozen_string_literal: true
 
-  validates_presence_of :login
+# Users need to be authenticated
+# Used to identify the person who is doing the sequencing
+class User < ApplicationRecord
+  validates :login, presence: true
 end
