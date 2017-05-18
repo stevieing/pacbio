@@ -12,14 +12,11 @@ class Sample < ApplicationRecord
   validates :name, presence: true
   validate :check_when_has_sequencing_run
 
-private
+  private
 
   def check_when_has_sequencing_run
-    if sequencing_run.present?
-      unless sequencing_metadata.present?
-        errors.add(:sample, 'has a sequencing run but no metadata.')
-      end
-    end
+    return unless sequencing_run.present?
+    return if sequencing_metadata.present?
+    errors.add(:sample, 'has a sequencing run but no metadata.')
   end
-
 end

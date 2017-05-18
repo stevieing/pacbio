@@ -13,6 +13,7 @@ RSpec.describe Sample, type: :model do
   end
 
   it 'must have some metadata if it has a sequencing run' do
-    expect(build(:sample, sequencing_run: build(:sequencing_run, number_of_samples: 1))).to_not be_valid
+    expect(build(:sample, sequencing_run: build(:sequencing_run, number_of_samples: 1)))
+      .to_not be_valid
   end
 end
